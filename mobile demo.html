@@ -1047,5 +1047,5 @@ rebuildPick();
 const params=new URLSearchParams(location.search);
 if(cleanMode){mode.value='refined-en';rebuildPick()}else if(SETS[params.get('mode')]){mode.value=params.get('mode');rebuildPick()}
 const unitObserver=new ResizeObserver(()=>document.getElementById('phone').style.setProperty('--ui-unit',document.getElementById('phone').clientWidth/410+'px'));unitObserver.observe(document.getElementById('phone'));
-show(lookup[params.get('screen')]?params.get('screen'):(cleanMode?'U01':'U00'),false);
+show(lookup[params.get('screen')]?params.get('screen'):'U00',false);
 </script></html>
